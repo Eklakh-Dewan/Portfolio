@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eklakh Dewan | AI & Data Science Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #5e35b1;
+      --primary-dark: #4527a0;
+      --secondary: #26c6da;
+      --dark: #263238;
+      --light: #f5f5f5;
+      --gray: #607d8b;
+      --success: #66bb6a;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Header with animated gradient */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      animation: pulse 15s infinite linear;
+    }
+    
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+    
+    .tagline {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      backdrop-filter: blur(5px);
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    
+    .logo {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Main content sections */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      display: inline-block;
+      position: relative;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+    
+   /* About Section */
+    #about {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    }
+
+    .section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    }
+
+    .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+    .about-text {
+    flex: 1;
+    margin-right: 20px;
+    }
+
+    .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    }
+    #skills {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    } 
+    .skills-list {
+    flex: 0;
+    }
+
+    .skills-heading {
+    margin-bottom: 0;
+    margin-top: 0; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    }
+
+    .skills-subheading {
+    margin-bottom: 0;
+    margin-top: 0; 
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4caf50;
+    margin-bottom: 8px;
+    }
+
+    .skills-section {
+    margin-bottom: 25px;
+    }
+
+    .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    }
+
+    .profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(151, 7, 7, 0.1);
+    transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-image img:hover {
+    transform: scale(1.05);
+    }
+
+    .fade-in {
+    animation: fadeIn 1s ease-in-out;
+    }
+
+    .delay-1 {
+    animation-delay: 0.5s;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    /* Projects section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .project-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+    
+    .project-info {
+      padding: 1.5rem;
+    }
+    
+    .project-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    .tech-tag {
+      background: var(--light);
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .project-link:hover {
+      color: var(--primary-dark);
+    }
+    
+    /* Contact section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 50%;
+      transition: background 0.3s, transform 0.3s;
+    }
+    
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    
+    /* Responsive design */
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .profile-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .timeline::before {
+        left: 30px;
+      }
+      
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-links {
+        gap: 1rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Eklakh Dewan</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header/Hero Section -->
+  <header>
+    <div class="header-content">
+      <h1 class="fade-in">Eklakh Dewan</h1>
+      <p class="fade-in delay-1">Data Science Specialist and AI Engineer</p>
+      <div class="tagline fade-in delay-2">Transforming data into intelligent solutions</div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <div class="about-text fade-in" style="flex: 1; min-width: 280px; padding-right: 20px;">
+        <p>
+          I am an aspiring Data Scientist and AI Engineer with a strong foundation in Python, machine learning, and API . 
+          My academic background in Artificial Intelligence & Data Science at KPRIET is complemented by hands-on experience in building intelligent systems, including real-time applications in computer vision and natural language processing.
+        </p>
+        <p>
+          I specialize in streamlit-based dashboards, gesture recognition interfaces, and AI-driven analytics, aiming to deliver impactful, scalable solutions that bridge research and real-world utility.
+        </p>
+      </div>
+      <div class="profile-image fade-in delay-1" style="flex: 1; min-width: 280px; display: flex; justify-content: center;">
+        <img src="c.jpg" alt="Eklakh Dewan" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+ </section>
+ <section id="skills">
+      <!-- Skills Section -->
+    <div class="skills-list" >
+      <h3 class="skills-heading" >Skills</h3>
+    </div> <!-- Programming & Development Skills -->
+    <section class="skills-section">
+      <h4 class="skills-subheading">Programming & Development</h4>
+      <div class="skills" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 10px;">
+          <span class="skill-chip"><i class="fas fa-check"></i> Python</span>
+          <span class="skill-chip"><i class="fas fa-check"></i> java </span>
+          <span class="skill-chip"><i class="fas fa-check"></i> C++</span>
+          <span class="skill-chip"><i class="fas fa-check"></i> SQL (MySQL)</span>
+        </div>
+      </section>
+  
+        <!-- AI & Machine Learning Skills -->
+        <section class="skills-section">
+          <h4 class="skills-subheading">AI & Machine Learning</h4>
+          <div class="skills" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 10px;">
+            <span class="skill-chip"><i class="fas fa-check"></i> Machine Learning</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Deep Learning</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> TensorFlow</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> PyTorch</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Natural Language Processing (NLP)</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> AI Model Integration</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Computer Vision (OpenCV, MediaPipe)</span>
+          </div>
+        </section>
+  
+        <!-- Data Science & Visualization -->
+        <section class="skills-section" >
+          <h4 class="skills-subheading">Data Science & Visualization</h4>
+          <div class="skills" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 10px;">
+            <span class="skill-chip"><i class="fas fa-check"></i> Data Analysis (Pandas, NumPy)</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Data Visualization (Matplotlib, Seaborn, Streamlit)</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Linear Regression & Clustering</span>
+          </div>
+        </section>
+  
+        <!-- Other Technical Skills -->
+        <section class="skills-section">
+          <h4 class="skills-subheading">Other Technical Skills</h4>
+          <div class="skills" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 10px;">
+            <span class="skill-chip"><i class="fas fa-check"></i> CUDA Programming (GPU Optimization, 3D Convolution)</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> API Integration</span>
+            <span class="skill-chip"><i class="fas fa-check"></i> Version Control (Git)</span>
+          </div>
+        </section>
+      </div>
+  
+
+    </div>
+  </section>
+  
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="section-title">
+      <h2>Professional Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <span class="timeline-date">2023 - Present</span>
+          <h3 class="timeline-title">AI Engineer Intern</h3>
+          <span class="timeline-company">Flowrage Technology, Nepal (Remote)</span>
+          <ul>
+            <li>Developed a Job Recommendation Dashboard using Streamlit with real-time analytics</li>
+            <li>Integrated multiple APIs and AI models to enhance system functionality</li>
+            <li>Optimized recommendation algorithms improving accuracy by 22%</li>
+            <li>Mentored by Sushant Karn, Co-founder and Admin Head</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- <div class="timeline-item fade-in delay-1">
+        <div class="timeline-content">
+          <span class="timeline-date">2022 - 2023</span>
+          <h3 class="timeline-title">Research Assistant</h3>
+          <span class="timeline-company">KPRIET AI Research Lab</span>
+          <ul>
+            <li>Conducted research on gesture recognition systems using computer vision</li>
+            <li>Published paper on "Efficient Hand Gesture Recognition for Human-Computer Interaction"</li>
+            <li>Developed prototype achieving 94.7% recognition accuracy</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-image">
+          <img src="job.jpg" alt="Job Recommendation System">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Job Recommendation System</h3>
+          <p>Advanced NLP-powered platform that analyzes resume PDFs and suggests optimal job matches using cosine similarity and custom scoring algorithms.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card fade-in delay-1">
+        <div class="project-image">
+          <img src="motion.png" alt="Gesture-based Laptop Control">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Gesture-based Laptop Control</h3>
+          <p>Computer vision system that enables complete laptop control through hand gestures including click, scroll, drag operations via webcam.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">MediaPipe</span>
+            <span class="tech-tag">PyAutoGUI</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card fade-in delay-2">
+        <div class="project-image">
+          <img src="Career.avif" alt="Career Path Recommendation">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Career Path Recommendation</h3>
+          <p>AI-based career guidance system that suggests optimal career paths based on skills assessment, financial background analysis, and personality matching.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="project-card fade-in delay-3">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/600x400/607d8b/ffffff?text=CUDA+3D+Conv" alt="3D Convolution CUDA">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">3D Convolution CUDA Implementation</h3>
+          <p>High-performance computing project comparing CUDA-accelerated 3D matrix convolution against CPU implementations with detailed benchmarking.</p>
+          <div class="project-tech">
+            <span class="tech-tag">CUDA</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Parallel Computing</span>
+            <span class="tech-tag">Benchmarking</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-card fade-in">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:eklakhdewanofficial@gmail.com">eklakh.inplace@gmail.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-card fade-in delay-1">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div>
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/eklakh-dewan-3ba34b2a2/" target="_blank">linkedin.com/in/eklakhdewan</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-card fade-in delay-2">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div>
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/Eklakh-Dewan/Work" target="_blank">github.com/eklakhdewan</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form fade-in delay-3">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Eklakh Dewan</h3>
+      <p>Artificial Intelligence & Data Science Specialist</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+      </div>
+      <p class="copyright">© 2025 Eklakh Dewan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple animation trigger on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      fadeElements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
