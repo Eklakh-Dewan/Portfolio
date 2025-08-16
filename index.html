@@ -208,25 +208,27 @@
         </div>
     
         <!-- Contact Form -->
+        <!-- Contact Form -->
         <div class="contact-form" style="max-width: 600px; margin: 0 auto;">
-        <form>
+          <form action="https://formspree.io/f/xkgzelae" method="POST">
             <div style="margin-bottom: 1rem;">
-            <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Name</label>
-            <input type="text" id="name" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
+              <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Name</label>
+              <input type="text" name="name" id="name" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
             </div>
             <div style="margin-bottom: 1rem;">
-            <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Email</label>
-            <input type="email" id="email" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
+              <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Email</label>
+              <input type="email" name="email" id="email" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;">
             </div>
             <div style="margin-bottom: 1.5rem;">
-            <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
-            <textarea id="message" rows="5" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+              <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
+              <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.7rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
             </div>
             <button type="submit" style="background-color: var(--primary-dark); color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 25px; font-weight: 500; cursor: pointer;">
-            Send Message <i class="fas fa-paper-plane"></i>
+              Send Message <i class="fas fa-paper-plane"></i>
             </button>
-        </form>
+          </form>
         </div>
+
     </section>
     
 
@@ -253,3 +255,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
