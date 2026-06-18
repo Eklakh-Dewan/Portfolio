@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects — Eklakh Dewan</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-dot"></span>eklakh.dewan</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <a href="https://drive.google.com/file/d/1AnkPW0jqdqRUwSJReCvHOcT-m_KYwCdm/view?usp=sharing" class="nav-cta" target="_blank" rel="noopener">↓ resume.pdf</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- EXPERIENCE -->
+  <section class="stage wrap" style="padding-bottom:70px">
+    <div class="stage-label"><span class="num">02</span> PROCESS</div>
+    <h2 class="stage-title">Experience</h2>
+    <p class="stage-sub">One internship, applied across the full ML lifecycle — not just modeling.</p>
+
+    <div class="exp-card reveal">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Data Science / AI-ML Engineering Intern</div>
+          <div class="exp-org">Flowrage Technology · Remote</div>
+        </div>
+        <div class="exp-meta">JAN 2025 — FEB 2025</div>
+      </div>
+      <ul class="exp-list">
+        <li>Developed and deployed three ML-backed prototypes using Python, FastAPI, and Streamlit, with a focus on reproducibility and automated preprocessing.</li>
+        <li>Refactored backend preprocessing and serialization logic, reducing inference latency variability by ~20% and simplifying model integration.</li>
+        <li>Improved model accuracy by ~12% through feature engineering, hyperparameter tuning, and statistical analysis.</li>
+        <li>Built multilingual NLP preprocessing pipelines and internal analytics dashboards (Plotly, Tableau) used by product and engineering partners for feature prioritization.</li>
+        <li>Maintained a modular, production-quality codebase using Git-based collaboration workflows.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="stage stage--tight wrap">
+    <div class="stage-label"><span class="num">03</span> OUTPUT</div>
+    <h2 class="stage-title">Selected Projects</h2>
+    <p class="stage-sub">Six builds spanning agentic systems, explainable ML, and multilingual NLP — chosen as the strongest, most representative work across every iteration of this portfolio.</p>
+
+    <div class="proj-grid">
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">01 / AGENTIC AI</span></div>
+        <h3>AI Agent Workflow Automation Platform</h3>
+        <p>An LLM-powered agentic platform for multi-step task execution, built on structured prompt pipelines and modular API orchestration. A YAML-driven configuration layer lets new workflows be composed without touching code, and the whole platform is containerized with Docker for consistent deployment.</p>
+        <div class="proj-tags"><span>Python</span><span>LangChain</span><span>FastAPI</span><span>YAML</span><span>Docker</span></div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">02 / EXPLAINABLE ML</span></div>
+        <h3>AI Career Path Recommendation System</h3>
+        <p>An end-to-end recommendation pipeline that doesn't just predict — it explains. SHAP interpretability surfaces why each career suggestion was made, served through a real-time FastAPI backend with feature engineering and ranking logic, and a Streamlit front-end for fast user testing.</p>
+        <div class="proj-tags"><span>Python</span><span>Scikit-learn</span><span>SHAP</span><span>FastAPI</span><span>Streamlit</span></div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">03 / NLP MATCHING</span></div>
+        <h3>Job Recommendation & Resume Matching</h3>
+        <p>Resume-to-job semantic matching using BERT embeddings combined with TF-IDF features and cosine similarity ranking. Extracts structured skills from resumes and runs a gap-analysis module to recommend learning paths — delivered as a Streamlit prototype for rapid iteration.</p>
+        <div class="proj-tags"><span>Python</span><span>BERT</span><span>NLP</span><span>Streamlit</span></div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">04 / CONVERSATIONAL AI</span></div>
+        <h3>Multilingual AI Chatbot</h3>
+        <p>An intent-classification and entity-recognition pipeline built on multilingual transformer models, supporting 3+ languages with a translation layer for fallback cases. Packaged with Docker for consistent testing and evaluation, and exposed via REST API for channel-agnostic deployment.</p>
+        <div class="proj-tags"><span>Python</span><span>Transformers</span><span>Hugging Face</span><span>Docker</span></div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">05 / MARKET INTELLIGENCE</span></div>
+        <h3>Career Path Recommender</h3>
+        <p>Aggregated job-market signals from multiple portals to compute trending skills and role growth trajectories. Trained models mapping user skill profiles to probable transition pathways, visualized through interactive Tableau dashboards.</p>
+        <div class="proj-tags"><span>Python</span><span>Web Scraping</span><span>Tableau</span></div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top"><span class="proj-idx">06 / RISK MODELING</span></div>
+        <h3>Churn Prediction & Explainability</h3>
+        <p>Tree-based ensemble models (XGBoost) for churn prediction, validated with cross-validation and AUC metrics. SHAP attribution surfaces the key drivers behind each prediction for business-facing retention planning.</p>
+        <div class="proj-tags"><span>Python</span><span>XGBoost</span><span>SHAP</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="stage stage--tight wrap">
+    <div class="deploy" style="grid-template-columns:1fr">
+      <div>
+        <h2>Want the deeper technical breakdown on any of these?</h2>
+        <p>Happy to walk through architecture decisions, trade-offs, or live-demo any of the above.</p>
+        <div style="margin-top:24px"><a href="contact.html" class="btn btn-solid">Discuss a Project →</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 EKLAKH DEWAN — DESIGNED, BUILT & EXPLAINED END-TO-END</p>
+    <div class="footer-status"><span class="dot"></span>SYSTEM STATUS: AVAILABLE</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
