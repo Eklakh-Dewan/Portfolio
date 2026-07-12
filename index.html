@@ -7,12 +7,14 @@
 <title>Eklakh Dewan — AI Engineer</title>
 <link rel="stylesheet" href="style.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><span class="brand-dot"></span>eklakh.dewan</a>
+    <a href="index.html" class="brand"><span class="brand-dot"></span>Eklakh Dewan</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">about</a></li>
@@ -32,10 +34,10 @@
       <div class="reveal">
         <div class="kicker"><span class="blink"></span>STATUS: OPEN_TO_OPPORTUNITIES</div>
         <div class="hero-name">
-          <span class="hn-name">Eklakh Dewan</span>
-          <span class="hn-tag">AI Engineer / Data Scientist</span>
+          <h1 class="hn-name"><span class="accent" style="background: linear-gradient(135deg, #00ff88, #00ccff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none; font-weight: 700;">Eklakh Dewan</span></h1>
+          <span class="hn-tag" style="background: linear-gradient(90deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 255, 0.1)); padding: 8px 16px; border-radius: 24px; border-left: 3px solid #00ff88; display: inline-block; margin-top: 12px;">🚀 AI Engineer / Data Scientist</span>
         </div>
-        <h1>Building AI that <span class="accent">explains itself.</span></h1>
+        <h2 class="hero-headline">Building AI that <span class="accent">explains itself.</span></h2>
         <p class="hero-lead">
           <strong>AI Engineer & Data Science undergraduate</strong> at KPRIET, shipping end-to-end ML systems —
           from FastAPI inference services to agentic LLM workflows — with explainability and reliability
@@ -47,7 +49,7 @@
         </div>
         <div class="hero-stats">
           <div class="hstat"><span class="v">NLP</span><span class="l">Core Focus</span></div>
-          <div class="hstat"><span class="v">6+</span><span class="l">Shipped Projects</span></div>
+          <div class="hstat"><span class="v">7</span><span class="l">Projects Built</span></div>
           <div class="hstat"><span class="v">3</span><span class="l">Certifications Live</span></div>
           <div class="hstat"><span class="v">2027</span><span class="l">Graduating</span></div>
         </div>
@@ -108,33 +110,42 @@
   <section class="stage wrap" id="output">
     <div class="stage-label"><span class="num">03</span> OUTPUT</div>
     <h2 class="stage-title">Featured work</h2>
-    <p class="stage-sub">Six shipped projects spanning agentic workflows, explainable recommenders, and multilingual NLP. Full case studies on the Projects page.</p>
+    <p class="stage-sub">Seven builds spanning multi-agent systems, enterprise-scale infrastructure, and explainable ML. Full case studies on the Projects page.</p>
 
     <div class="proj-grid">
       <article class="proj-card">
-        <div class="proj-top"><span class="proj-idx">PROJECT / 01</span></div>
-        <h3>AI Agent Workflow Automation Platform</h3>
-        <p>An LLM-powered agent platform orchestrating multi-step tasks through structured prompt pipelines and a YAML-driven config layer for composing new workflows without code changes.</p>
-        <div class="proj-tags"><span>Python</span><span>LangChain</span><span>FastAPI</span><span>Docker</span></div>
+        <div class="proj-top">
+          <span class="proj-idx">PROJECT / 01</span>
+          <span class="proj-status prototype">PROTOTYPE</span>
+        </div>
+        <h3>Autonomous AI Agent Platform</h3>
+        <p>A multi-agent orchestration platform that plans, delegates, and executes multi-step tasks autonomously — inspired by OpenAI's Agents SDK and LangGraph.</p>
+        <div class="proj-tags"><span>Python</span><span>MCP</span><span>Multi-Agent Systems</span></div>
       </article>
 
       <article class="proj-card">
-        <div class="proj-top"><span class="proj-idx">PROJECT / 02</span></div>
-        <h3>AI Career Path Recommender</h3>
+        <div class="proj-top">
+          <span class="proj-idx">PROJECT / 02</span>
+          <span class="proj-status prototype">PROTOTYPE</span>
+        </div>
+        <h3>Enterprise AI Search Platform</h3>
+        <p>A unified semantic search engine for fragmented company knowledge, combining RAG-based retrieval with Elasticsearch — in the spirit of Glean or Copilot.</p>
+        <div class="proj-tags"><span>RAG</span><span>Vector DB</span><span>Elasticsearch</span></div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-top">
+          <span class="proj-idx">PROJECT / 03</span>
+          <span class="proj-status shipped">SHIPPED</span>
+        </div>
+        <h3>AI Career Path Recommendation System</h3>
         <p>Explainable ML recommendation engine using SHAP to surface why each suggestion was made, served through a real-time FastAPI backend.</p>
         <div class="proj-tags"><span>Scikit-learn</span><span>SHAP</span><span>Streamlit</span></div>
-      </article>
-
-      <article class="proj-card">
-        <div class="proj-top"><span class="proj-idx">PROJECT / 03</span></div>
-        <h3>Job Recommendation Engine</h3>
-        <p>Resume-to-job semantic matching using BERT embeddings, TF-IDF, and cosine similarity — with a skills gap-analysis module recommending learning paths.</p>
-        <div class="proj-tags"><span>BERT</span><span>NLP</span><span>FastAPI</span></div>
       </article>
     </div>
 
     <div style="text-align:center; margin-top:40px">
-      <a href="projects.html" class="btn btn-outline">See all 6 projects →</a>
+      <a href="projects.html" class="btn btn-outline">See all 7 projects →</a>
     </div>
   </section>
 

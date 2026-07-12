@@ -289,6 +289,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .proj-link svg{width:13px; height:13px}
 
+.proj-status{
+  font-family:var(--mono); font-size:0.68rem; font-weight:700; letter-spacing:0.04em;
+  padding:4px 9px; border-radius:20px; white-space:nowrap; display:inline-flex; align-items:center; gap:5px;
+}
+.proj-status::before{content:''; width:6px; height:6px; border-radius:50%}
+.proj-status.shipped{background:rgba(92,199,136,0.14); color:#5CC788}
+.proj-status.shipped::before{background:#5CC788}
+.proj-status.prototype{background:rgba(232,193,92,0.14); color:#E8C15C}
+.proj-status.prototype::before{background:#E8C15C}
+
+.status-legend{
+  display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin-bottom:28px;
+  font-family:var(--mono); font-size:0.8rem; color:var(--muted);
+}
+.status-legend .proj-status{font-size:0.72rem}
+
 /* =================== CERTS =================== */
 .cert-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px}
 .cert-card{
